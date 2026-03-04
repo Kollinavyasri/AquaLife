@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AquaLife Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Chart.js -->
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Leaflet Map -->
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+</head>
+
+<body>
+
+<!-- Loading Spinner -->
+
+<div id="loader">
+  <div class="spinner"></div>
+</div>
+
+<div class="container">
+
+  <!-- Top Bar -->
+
+  <div class="top-bar">
+
+<button onclick="goHome()">🏠 Home</button>
+
+<h2 id="riverName"></h2>
+
+<button onclick="refreshData()">🔄 Refresh</button>
+
+  </div>
+
+  <!-- Environmental Cards -->
+
+  <div class="cards">
+
+
+<div class="card" id="temp"></div>
+<div class="card" id="humidity"></div>
+<div class="card" id="pm25"></div>
+<div class="card" id="ph"></div>
+
+  </div>
+
+  <!-- Ecosystem Health -->
+
+  <div id="health" class="health"></div>
+
+  <!-- Score -->
+
+  <div id="scoreMeter"></div>
+
+  <!-- Charts -->
+
+  <div class="charts-row">
+
+<div class="chart-box">
+  <canvas id="chart1"></canvas>
+</div>
+
+<div class="chart-box">
+  <canvas id="chart2"></canvas>
+</div>
+
+
+  </div>
+  <div id="suggestions"></div>
+
+  <!-- Biodiversity Section -->
+
+  <div id="biodiversity"></div>
+
+  <!-- Map -->
+
+  <div id="map"></div>
+
+</div>
+
+<!-- Main Script -->
+
+<script src="script.js"></script>
+
+<script>
+
+function goHome(){
+  window.location = "index.html";
+}
+
+</script>
+
+</body>
+</html>
